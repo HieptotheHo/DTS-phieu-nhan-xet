@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phiếu Nhận Xét</title>
+    <style>
+        :root {
+            --baby-blue: #b4c7e7;
+            --da-nguoi:#f9b9a5;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            width: 50%;
+            border: 1px solid black;
+            padding:  1em 5em;
+            height: 100vh;
+            margin:0 auto;
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            
+        }
+        #header {
+            text-align: center;
+            text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;        }
+        #header > h1 {
+            font-size: 70px;
+            color:var(--baby-blue);
+        }
+        #header > h2 {
+            color: var(--da-nguoi);
+            font-size:45px;
+        }
+        #ten {
+            background-color: var(--da-nguoi);
+            padding: 0.7em;
+            margin-top:1.5em;
+        }
+        #title {
+            background-color: var(--baby-blue);
+            padding: 0.7em;
+            margin-top: 1em;
+            text-align: center;
+        }
+        #skills, #evaluation-container {
+            margin-top:2em;
+            display:flex;
+            justify-content:space-between;
+            gap:1em;
+        }
+        #L-S, #R-W,.eva {
+            width: 50%;
+            border: 2px solid var(--da-nguoi)
+        }
+        .eva {
+            border:none;
+            background-color:var(--baby-blue)
+        }
+        .eva > p:first-child {
+            color: rgb(120, 22, 22);
+        }
+        .skill > p:first-child {
+            color: rgb(86, 86, 153);
+        }
+        #image {
+            position: absolute;
+            z-index: -1;
+            opacity: 50%;
+            left: 34%;
+            top:20%;
+        }
+        .skill, .eva {
+            padding: 1em;
+        }
+        p[id] {
+            margin-top: 1em;
+            line-height: 1.5em;
+            text-align: justify;
+            /* text-transform: ; */
+            padding-bottom: 2.5em;
+        }
+        p[id]::first-letter {
+            text-transform: uppercase;
+        }
+ 
+       
+    </style>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+</head>
+<body>
+    <div id="image">
+        <img src="image.png" alt="">
+    </div>
+    <div id="header">
+        <h1>NHẬN XÉT HỌC LỰC</h1>
+        <h2>ACADEMIC ASSESSMENT</h2>
+    </div>
+    <div id="ten" style="text-transform: uppercase;">
+
+        <div>
+            <h2 style="color: rgb(81, 81, 151); position: absolute;">TÊN</h2>
+
+        </div>
+            
+            <div style="display: flex; justify-content: center;">
+                <h2 id="student"></h2>
+            </div>
+       
+    </div>
+    <div id="title">
+        <h2>NHẬN XÉT HỌC LỰC <span style="color:red">THÁNG 2</span></h2>
+    </div>
+    <main>
+        <div id="skills">
+            <div id="L-S">
+                <div class="skill">
+                    <p >Nghe (Listening)</p>
+                    <p id="listen">...</p>
+                </div>
+                <div class="skill">
+                    <p >Nói (Speaking)</p>
+                    <p id="speak">dsadaw</p>
+                </div>
+            </div>
+            <div id="R-W">
+                <div class="skill">
+                    <p >Đọc (Reading)</p>
+                    <p id="read">...</p>
+                </div>
+                <div class="skill">
+                    <p >Viết (Writing)</p>
+                    <p id="write">...</p>
+                </div>
+            </div>
+        </div>
+        <div id="evaluation-container">
+            <div class="eva">
+                <p>Nhận xét chung về bài test</p>
+                <p id="test">...</p>
+            </div>
+            <div class="eva">
+                <p>Góp ý từ giáo viên</p>
+                <p id="feedback">...</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
