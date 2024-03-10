@@ -117,7 +117,6 @@ var currentChosenElement;
 for(let i = 0; i<skills.length;i++) {
     
     skills[i].addEventListener('click', (e)=>{
-        console.log('hi')
         adjustText.value = skillContent[i].textContent;
         currentChosenElement = skillContent[i]; 
         console.log(currentChosenElement)
@@ -130,3 +129,8 @@ adjustText.addEventListener('input', ()=> {
     currentChosenElement.textContent = adjustText.value;  
 })
 
+document.querySelector('#ten').addEventListener('click', (e)=> {
+    adjustField.textContent = 'TÊN'
+    adjustText.value = studentName.textContent
+    currentChosenElement = studentName;
+})
