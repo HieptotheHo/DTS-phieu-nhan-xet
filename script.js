@@ -104,3 +104,29 @@ const adjustMonth = () => {
     const monthDisplayed = document.querySelector('#month-displayed')
     monthDisplayed.textContent = month;
 }
+
+const skills = document.querySelectorAll('.skill, .eva');
+const skillContent = document.querySelectorAll('p[id]')
+const adjustText = document.querySelector('.text-area')
+const adjustField = document.querySelector('#adjust-field')
+// const eva = document.querySelectorAll('.eva >p[id]')
+console.log(skills)
+
+var currentChosenElement;
+
+for(let i = 0; i<skills.length;i++) {
+    
+    skills[i].addEventListener('click', (e)=>{
+        console.log('hi')
+        adjustText.value = skillContent[i].textContent;
+        currentChosenElement = skillContent[i]; 
+        console.log(currentChosenElement)
+        adjustField.textContent = skills[i].querySelector('p:nth-child(1)').textContent
+    })
+}
+
+adjustText.addEventListener('input', ()=> {
+    // console.log(adjustText.textContent);
+    currentChosenElement.textContent = adjustText.value;  
+})
+

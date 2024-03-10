@@ -79,7 +79,7 @@
         }
         .skill, .eva {
             padding: 1em;
-            
+
         }
         p[id] {
             margin-top: 1em;
@@ -101,6 +101,9 @@
         }
         input, select {
             height: 32px;
+        }
+        p[id] {
+            word-wrap: break-word;
         }
     </style>
       <script data-require="d3@3.5.3" data-semver="3.5.3" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.js"></script>
@@ -171,7 +174,10 @@
             </div>
         </div>
     </main>
-
+    <div style=" position: absolute; top:50px; left:100px;" id="adjust-text">
+        <h3 id="adjust-field"></h3>
+        <textarea cols="30" style="padding: 1em;" rows="20" class="text-area"></textarea>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
