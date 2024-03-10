@@ -130,6 +130,7 @@ adjustText.addEventListener('input', ()=> {
 })
 
 document.querySelector('#ten').addEventListener('click', (e)=> {
+    console.log('hihi')
     adjustField.textContent = 'TÊN'
     adjustText.value = studentName.textContent
     currentChosenElement = studentName;
